@@ -1,45 +1,35 @@
 package com.calc.app.endpoint.rest.arith;
-import com.poja.first.service.AddService;
-import com.poja.first.service.SubtractService;
-import com.poja.first.service.MultiplyService;
-import com.poja.first.service.DivideService;
+
+import com.poja.first.service.CalculatorService;
 import java.util.Map;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("/calc")
+@AllArgsConstructor
 public class CalculatorController {
 
-    private final AddService addService;
-    private final SubtractService subtractService;
-    private final MultiplyService multiplyService;
-    private final DivideService divideService;
+    private final CalculatorService calculatorService;
 
     @GetMapping("/add")
     public ResponseEntity<?> add(@RequestParam double a, @RequestParam double b) {
-        double result = addService.add(a, b);
-        return ResponseEntity.ok(Map.of("result", result));
+        return ResponseEntity.ok(Map.of("result", calculatorService.add(a, b)));
     }
-
 
     @GetMapping("/subtract")
     public ResponseEntity<?> subtract(@RequestParam double a, @RequestParam double b) {
-        double result = subtractService.subtract(a, b);
-        return ResponseEntity.ok(Map.of("result", result));
+        return ResponseEntity.ok(Map.of("result", calculatorService.subtract(a, b)));
     }
 
     @GetMapping("/multiply")
     public ResponseEntity<?> multiply(@RequestParam double a, @RequestParam double b) {
-        double result = multiplyService.multiply(a, b);
-        return ResponseEntity.ok(Map.of("result", result));
+        return ResponseEntity.ok(Map.of("result", calculatorService.multiply(a, b)));
     }
 
     @GetMapping("/divide")
     public ResponseEntity<?> divide(@RequestParam double a, @RequestParam double b) {
-        double result = divideService.divide(a, b);
-        return ResponseEntity.ok(Map.of("result", result));
+        return ResponseEntity.ok(Map.of("result", calculatorService.divide(a, b)));
     }
 }
