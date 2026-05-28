@@ -1,6 +1,6 @@
-package com.calc.app.endpoint.rest.controller.health;
+package com.calc.app.endpoint.rest.health;
 
-import static com.calc.app.endpoint.rest.controller.health.PingController.OK;
+import static com.calc.app.endpoint.rest.health.PingController.OK;
 import static java.io.File.createTempFile;
 
 import com.calc.app.PojaGenerated;
