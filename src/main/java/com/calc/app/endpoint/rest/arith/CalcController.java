@@ -1,7 +1,8 @@
 package com.calc.app.endpoint.rest.arith;
 
-import com.poja.first.service.CalculatorService;
 import java.util.Map;
+
+import com.calc.app.service.CalculatorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/calc")
 @AllArgsConstructor
-public class CalculatorController {
+public class CalcController {
 
     private final CalculatorService calculatorService;
 
