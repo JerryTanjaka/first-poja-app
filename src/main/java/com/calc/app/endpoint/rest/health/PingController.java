@@ -1,4 +1,4 @@
-package com.calc.app.endpoint.rest.controller.health;
+package com.calc.app.endpoint.rest.health;
 
 import com.calc.app.PojaGenerated;
 import lombok.AllArgsConstructor;
