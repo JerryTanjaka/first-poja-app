@@ -16,46 +16,46 @@ public class CalculatorServiceTest {
 
   @Test
   void should_add_two_positive_numbers() {
-    assertEquals(15, calculatorService.add(10, 5));
+    assertEquals(15L, calculatorService.add(10L, 5L));
   }
 
   @Test
   void add_should_throw_when_negative() {
-    assertThrows(NegativeNumberException.class, () -> calculatorService.add(-1, 5));
+    assertThrows(NegativeNumberException.class, () -> calculatorService.add(-1L, 5L));
   }
 
   @Test
   void should_subtract_two_positive_numbers() {
-    assertEquals(5, calculatorService.subtract(10, 5));
+    assertEquals(5L, calculatorService.subtract(10L, 5L));
   }
 
   @Test
   void subtract_should_throw_when_negative() {
-    assertThrows(NegativeNumberException.class, () -> calculatorService.subtract(10, -5));
+    assertThrows(NegativeNumberException.class, () -> calculatorService.subtract(10L, -5L));
   }
 
   @Test
   void should_multiply_two_positive_numbers() {
-    assertEquals(50, calculatorService.multiply(10, 5));
+    assertEquals(50L, calculatorService.multiply(10L, 5L));
   }
 
   @Test
   void multiply_should_throw_when_negative() {
-    assertThrows(NegativeNumberException.class, () -> calculatorService.multiply(-1, 5));
+    assertThrows(NegativeNumberException.class, () -> calculatorService.multiply(-1L, 5L));
   }
 
   @Test
   void should_divide_two_positive_numbers() {
-    assertEquals(2, calculatorService.divide(10, 5));
+    assertEquals(2L, calculatorService.divide(10L, 5L));
   }
 
   @Test
   void divide_should_throw_when_negative() {
-    assertThrows(NegativeNumberException.class, () -> calculatorService.divide(-1, 5));
+    assertThrows(NegativeNumberException.class, () -> calculatorService.divide(-1L, 5L));
   }
 
   @Test
   void divide_should_throw_when_b_is_zero() {
-    assertThrows(ZeroDivisionError.class, () -> calculatorService.divide(10, 0));
+    assertThrows(ZeroDivisionError.class, () -> calculatorService.divide(10L, 0L));
   }
 }

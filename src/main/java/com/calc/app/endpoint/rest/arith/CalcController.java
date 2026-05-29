@@ -14,22 +14,22 @@ public class CalcController {
   private final CalculatorService calculatorService;
 
   @GetMapping("/add")
-  public ResponseEntity<?> add(@RequestParam double a, @RequestParam double b) {
+  public ResponseEntity<?> add(@RequestParam Long a, @RequestParam Long b) {
     return ResponseEntity.ok(Map.of("result", calculatorService.add(a, b)));
   }
 
   @GetMapping("/subtract")
-  public ResponseEntity<?> subtract(@RequestParam double a, @RequestParam double b) {
+  public ResponseEntity<?> subtract(@RequestParam Long a, @RequestParam Long b) {
     return ResponseEntity.ok(Map.of("result", calculatorService.subtract(a, b)));
   }
 
   @GetMapping("/multiply")
-  public ResponseEntity<?> multiply(@RequestParam double a, @RequestParam double b) {
+  public ResponseEntity<?> multiply(@RequestParam Long a, @RequestParam Long b) {
     return ResponseEntity.ok(Map.of("result", calculatorService.multiply(a, b)));
   }
 
   @GetMapping("/divide")
-  public ResponseEntity<?> divide(@RequestParam double a, @RequestParam double b) {
+  public ResponseEntity<?> divide(@RequestParam Long a, @RequestParam Long b) {
     return ResponseEntity.ok(Map.of("result", calculatorService.divide(a, b)));
   }
 }
